@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Setup
 
 # Get an API Key
@@ -53,3 +54,8 @@ The latest documentation for the TMDb APIs is available [here.
 [https://www.themoviedb.org](https://www.themoviedb.org)
 [https://developers.themoviedb.org](https://developers.themoviedb.org)
 
+=======
+# TMDB
+[The Movie Database (TMDB)
+](https://www.themoviedb.org/)
+>>>>>>> 7c6c84df47cbf01c9b9c66e41d474e8de78aecbe
