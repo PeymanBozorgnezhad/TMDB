@@ -21,29 +21,29 @@ TMDbAPI.setAPIKey("ahb4334n43nj34jk43nklkg4")
 
 # API Areas
 
-# Certifications
+## Certifications
 
 Get an up to date list of the officially supported movie certifications on TMDB.
 
-# Configuration
+## Configuration
 
 System wide configuration information.
 
-# Discover
+## Discover
 
 Discover movies by different types of data like average rating, number of votes, genres and certifications.
 
 Discover TV shows by different types of data like average rating, number of votes, genres, the network they aired on and air dates.
 
-# Movies
+## Movies
 
 Get information about movies.
 
-# People
+## People
 
 Get information about people.
 
-# Search
+## Search
 
 Search for movies, TV shows and people.
 
