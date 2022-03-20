@@ -1,2 +1,2 @@
 # TMDB
-The Movie Database (TMDb)
+https://www.themoviedb.org/
