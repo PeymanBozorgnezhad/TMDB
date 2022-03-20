@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">TMDB</string>
+    <!--<string name="api_key">b133c1180758351bf9a6631f15a7457f</string>-->
+    <string name="title_activity_movie">MovieActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="pull_down">Pull Down</string>
+    <string name="splash_screen">Splash Screen</string>
+    <string name="the_movie_db">The Movie DB</string>
+    <string name="bring_home_the_cinema_app">Bring home the cinema app</string>
+    <string name="txtMore">more</string>
+    <string name="txtPopular">Most Popular</string>
+    <string name="txtPopulars">Movies Popular</string>
+    <string name="txtTopRate">Movies Top Rated </string>
+    <string name="txtUpComing">Movies UpComing</string>
+    <string name="txtNowPlaying">Movies Now Playing</string>
+    <string name="txtTvAiring">Tv Airing Today</string>
+    <string name="Movies_Details">Movie Details</string>
+    <string name="Slide_Title"><b>Slide Title</b> \n  more text here </string>
+
+    <string name="sharedElementName">sharedName</string>
+    <string name="title_activity_top_rate_movie">TopRateMovieActivity</string>
+    <string name="txtDetail_movie">Movie Detail</string>
+    <string name="title_activity_now_playing_movie">NowPlayingMovieActivity</string>
+    <string name="search_for_movies">Search Movies Popular,Top Rated,UpComing,…</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtTrailer">Videos</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+
+
+    <string name="no_movies_found">No Movies found. Kindly visit again to fetch them.</string>
+    <string name="no_match">"No Match. Please try again"</string>
+    <string name="txtSearch">Search</string>
+    <string name="warning_exit">Press once again to exit!</string>
+
+    <string name="release_date">Release date</string>
+    <string name="language">Language</string>
+    <string name="label_votes">%s votes</string>
+    <string name="label_overview">Overview</string>
+    <string name="label_trailers">Trailers</string>
+    <string name="label_casts">Casts</string>
+    <string name="no_available_trailers">Trailers: (No Available Trailers)</string>
+    <string name="action_retry">Retry</string>
+
+    <string name="youtube_url">https://www.youtube.com/watch?v=</string>
+    <string name="thumbnail_firstPart">https://i1.ytimg.com/vi/</string>
+    <string name="thumbnail_secondPart">/hqdefault.jpg</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_scrolling_two">ScrollingActivityTwo</string>
+    <string name="txtNavhome">Home</string>
+    <string name="txtNavMovies">Movies</string>
+    <string name="txtNavTv">Tv Shows</string>
+    <string name="txtNavCommunicate">Communicate</string>
+    <string name="txtNavAbout">About</string>
+    <string name="txtNameMovie">TMDB</string>
+    <string name="txtSite">www.themoviedb.org</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>

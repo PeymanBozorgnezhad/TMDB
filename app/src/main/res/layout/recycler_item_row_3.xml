@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="nowPlaying"
+            type="com.example.mytmdbclient.model.NowPlaying" />
+
+        <variable
+            name="genre"
+            type="String" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+
+                <ImageView
+                    android:id="@+id/imgBackDrop"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    bind:backdropPath="@{nowPlaying.backdropPath}"
+                    tools:ignore="ContentDescription,MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/imgSmallPic"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgBackDrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgBackDrop"
+                    bind:posterPath="@{nowPlaying.posterPath}"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/txtTitleNowPlaying"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/baloo_thambi"
+                    android:text="@{nowPlaying.title}"
+                    android:textColor="#C2D507"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/imgSmallPic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgSmallPic" />
+
+                <TextView
+                    android:id="@+id/txtGenreNowPlaying"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/baloo_da"
+                    android:text="@{genre}"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgBackDrop"
+                    app:layout_constraintEnd_toStartOf="@+id/imgSmallPic"
+                    app:layout_constraintStart_toStartOf="@+id/imgBackDrop"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDetail" />
+
+                <ImageView
+                    android:id="@+id/imgDetailNowPlaying"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="180dp"
+                    android:layout_marginBottom="100dp"
+                    android:tint="#FF9800"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgBackDrop"
+                    app:layout_constraintEnd_toStartOf="@+id/imgSmallPic"
+                    app:layout_constraintStart_toStartOf="@+id/imgBackDrop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    bind:srcCompat="@drawable/baseline_play_circle_filled_black_48dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/txtDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/baloo_da"
+                    android:text="@string/Movies_Details"
+                    android:textColor="#CAC9C9"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgDetailNowPlaying"
+                    app:layout_constraintStart_toEndOf="@+id/imgDetailNowPlaying" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="150dp"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/ic_imdb"
+                    android:tint="#E91E63"
+                    app:layout_constraintBottom_toTopOf="@+id/txtGenreNowPlaying"
+                    app:layout_constraintEnd_toStartOf="@+id/imgSmallPic"
+                    app:layout_constraintHorizontal_bias="0.815"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgDetailNowPlaying"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="110dp"
+                    android:fontFamily="@font/baloo_thambi"
+                    android:gravity="center"
+                    android:text="@{Double.toString(nowPlaying.voteAverage)+`/10`}"
+                    android:textColor="@color/colorTitlePopulars"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintEnd_toStartOf="@+id/imgSmallPic"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
+

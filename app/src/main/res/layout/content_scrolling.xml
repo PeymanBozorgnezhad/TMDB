@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="secondary"
+            type="com.example.mytmdbclient.model.Movie" />
+
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".view.ScrollingActivity"
+        tools:showIn="@layout/activity_scrolling">
+
+
+        <LinearLayout
+            android:id="@+id/lnrContent_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            tools:ignore="UselessLeaf,UselessParent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+
+
+
+                <TextView
+
+                    android:id="@+id/label_overview"
+
+                    style="@style/Label"
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/label_overview"
+                    app:layout_constraintBottom_toTopOf="@+id/tvPlotsynopsisPop_scroll"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.526"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.codesgood.views.JustifiedTextView
+                    android:id="@+id/tvPlotsynopsisPop_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/baloo_da"
+                    android:padding="16dp"
+                    android:text="@{secondary.overview}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textColor="@color/colorTitlePopulars"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_overview"
+                    tools:ignore="RtlHardcoded"
+                    tools:layout_constraintLeft_creator="1"
+                    tools:layout_constraintTop_creator="1">
+
+
+                </com.codesgood.views.JustifiedTextView>
+
+
+                <androidx.constraintlayout.widget.Barrier
+
+                    android:id="@+id/barrier3"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="tvPlotsynopsisPop_scroll"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="192dp" />
+
+
+                <View
+
+                    android:id="@+id/view_divider2"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="1dp"
+
+                    android:layout_marginTop="24dp"
+
+                    android:background="?android:attr/listDivider"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="@+id/barrier3" />
+
+
+                <TextView
+
+                    android:id="@+id/label_release_date"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+
+                    android:layout_marginTop="8dp"
+
+                    android:layout_marginEnd="16dp"
+
+                    android:text="@string/release_date"
+
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+
+                    android:textColor="@color/secondaryText"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@+id/label_language"
+
+                    app:layout_constraintTop_toBottomOf="@+id/text_release_date" />
+
+
+                <TextView
+
+                    android:id="@+id/text_release_date"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="16dp"
+
+                    android:drawableStart="@drawable/ic_av_timer_black_24dp"
+
+                    android:drawablePadding="8dp"
+
+                    android:gravity="center"
+
+                    android:text="@{secondary.releaseDate}"
+
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+
+                    app:layout_constraintEnd_toEndOf="@+id/label_release_date"
+
+                    app:layout_constraintStart_toStartOf="@+id/label_release_date"
+
+                    app:layout_constraintTop_toBottomOf="@+id/view_divider2"
+
+                    tools:text="@tools:sample/date/mmddyy" />
+
+
+                <TextView
+
+                    android:id="@+id/label_vote"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+
+                    android:layout_marginTop="8dp"
+
+                    android:layout_marginEnd="16dp"
+
+                    android:text="@{@string/label_votes(secondary.voteCount)}"
+
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+
+                    android:textColor="@color/secondaryText"
+
+                    app:layout_constraintEnd_toStartOf="@+id/label_language"
+
+                    app:layout_constraintHorizontal_chainStyle="spread"
+
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/text_vote"
+
+                    tools:text="233 votes" />
+
+
+                <TextView
+
+                    android:id="@+id/text_vote"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:drawableEnd="@drawable/ic_star_black_24dp"
+
+                    android:drawablePadding="8dp"
+
+                    android:gravity="center"
+
+                    android:text="@{String.valueOf(secondary.voteAverage)}"
+
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+
+                    app:layout_constraintEnd_toEndOf="@+id/label_vote"
+
+                    app:layout_constraintStart_toStartOf="@+id/label_vote"
+
+                    app:layout_constraintTop_toTopOf="@+id/text_release_date"
+
+                    tools:text="7/10" />
+
+
+                <TextView
+
+                    android:id="@+id/label_language"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="8dp"
+
+                    android:text="@string/language"
+
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+
+                    android:textColor="@color/secondaryText"
+
+                    app:layout_constraintEnd_toStartOf="@+id/label_release_date"
+
+                    app:layout_constraintStart_toEndOf="@+id/label_vote"
+
+                    app:layout_constraintTop_toBottomOf="@+id/text_language" />
+
+
+                <TextView
+
+                    android:id="@+id/text_language"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:drawableStart="@drawable/ic_language_black_24dp"
+
+                    android:drawablePadding="8dp"
+
+                    android:gravity="center"
+
+                    android:text="@{secondary.originalLanguage}"
+
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+
+                    app:layout_constraintEnd_toEndOf="@+id/label_language"
+
+                    app:layout_constraintStart_toStartOf="@+id/label_language"
+
+                    app:layout_constraintTop_toTopOf="@+id/text_vote"
+
+                    tools:text="En" />
+
+
+                <androidx.constraintlayout.widget.Barrier
+
+                    android:id="@+id/barrier4"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="label_vote,label_language,label_release_date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="199dp" />
+
+
+                <View
+
+                    android:id="@+id/view_divider3"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="1dp"
+
+                    android:layout_marginTop="24dp"
+
+                    android:background="?android:attr/listDivider"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="@+id/barrier4" />
+
+
+                <TextView
+
+                    android:id="@+id/label_trailers"
+
+                    style="@style/Label"
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/label_trailers"
+                    app:layout_constraintBottom_toTopOf="@+id/RvPopularTrailer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_divider3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RvPopularTrailer"
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="match_parent"
+
+                    android:layout_marginTop="16dp"
+
+                    android:layout_marginBottom="8dp"
+
+                    android:clipToPadding="false"
+
+                    android:orientation="horizontal"
+
+                    android:paddingEnd="16dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_trailers"
+                    tools:ignore="RtlSymmetry" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="RvPopularTrailer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="468dp">
+
+                </androidx.constraintlayout.widget.Barrier>
+
+                <View
+
+                    android:id="@+id/view_divider5"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="1dp"
+
+                    android:layout_marginTop="9dp"
+
+                    android:background="?android:attr/listDivider"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/RvPopularTrailer" />
+
+                <TextView
+                    android:id="@+id/label_casts"
+                    style="@style/Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/label_casts"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/RvPopularCast"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_divider5" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RvPopularCast"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_casts"
+                    tools:ignore="RtlSymmetry" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="top" />
+
+
+                <!-- <TextView
+
+                     android:id="@+id/label_trailers"
+
+                     style="@style/Label"
+
+                     android:layout_width="0dp"
+
+                     android:layout_height="wrap_content"
+
+                     android:layout_marginStart="16dp"
+
+                     android:layout_marginTop="8dp"
+                     android:layout_marginEnd="16dp"
+                     android:layout_marginBottom="16dp"
+                     android:text="@string/label_trailers"
+                     app:layout_constraintBottom_toTopOf="@+id/RvPopularTrailer"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/view_divider3" />
+
+                 <androidx.recyclerview.widget.RecyclerView
+                     android:id="@+id/RvPopularTrailer"
+
+                     android:layout_width="0dp"
+
+                     android:layout_height="match_parent"
+
+                     android:orientation="horizontal"
+
+                     android:layout_marginTop="16dp"
+
+                     android:layout_marginBottom="16dp"
+
+                     android:clipToPadding="false"
+
+                     android:paddingEnd="16dp"
+
+                     app:layout_constraintEnd_toEndOf="parent"
+
+                     app:layout_constraintStart_toStartOf="parent"
+
+                     app:layout_constraintTop_toBottomOf="@+id/label_trailers"
+
+                     tools:ignore="RtlSymmetry" />-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
+

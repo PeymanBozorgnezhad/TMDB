@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/aclonica</item>
+        <item>@font/acme</item>
+        <item>@font/amiko</item>
+        <item>@font/antic</item>
+        <item>@font/arbutus_slab</item>
+        <item>@font/baloo</item>
+        <item>@font/baloo_da</item>
+        <item>@font/baloo_tamma</item>
+        <item>@font/baloo_thambi</item>
+        <item>@font/bowlby_one</item>
+        <item>@font/coiny</item>
+        <item>@font/knewave</item>
+    </array>
+</resources>

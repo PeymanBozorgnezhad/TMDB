@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mytmdbclient"
+    tools:ignore="ExtraText">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".view.TvAiringMovieActivity"
+            android:parentActivityName=".view.RecyclerViewActivity"></activity>
+        <activity
+            android:name=".view.TvAiringMainActivity"
+            android:theme="@style/AppThemeMain"></activity>
+        <activity
+            android:name=".view.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:parentActivityName=".view.RecyclerViewActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.WebViewActivity" />
+        <activity
+            android:name=".view.UpComingMainActivity"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".view.NowPlayingMainActivity"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".view.UpComingMovieActivity"
+            android:parentActivityName=".view.RecyclerViewActivity" />
+        <activity
+            android:name=".view.NowPlayingMovieActivity"
+            android:parentActivityName=".view.RecyclerViewActivity" />
+        <activity
+            android:name=".view.TopRateMainActivity"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".view.TopRateMovieActivity"
+            android:label="@string/title_activity_top_rate_movie"
+            android:parentActivityName=".view.RecyclerViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.RecyclerViewActivity"
+            android:theme="@style/AppThemeMain" />
+
+        <receiver
+            android:name=".util.NetworkChangeReceiver"
+            android:enabled="true">
+
+            <!-- android:exported="true" -->
+            <intent-filter>
+
+                <!-- Intent filters for broadcast receiver -->
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".view.MainActivity"
+            android:theme="@style/AppThemeMain" />
+        <activity
+            android:name=".view.MovieActivity"
+            android:label="@string/title_activity_movie"
+            android:parentActivityName=".view.RecyclerViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".view.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.example.mytmdbclient.model.Movie" />
+
+    </data>
+
+
+    <!--   <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="wrap_content"
+               android:layout_height="350dp"
+               android:backgroundTint="#AF2D59"
+               app:cardCornerRadius="5dp"
+               app:cardElevation="3dp">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:weightSum="100"
+                   tools:ignore="UseCompoundDrawables,UselessLeaf">
+
+                   <ImageView
+                       android:id="@+id/imgMovie"
+                       android:layout_width="200dp"
+                       android:layout_height="0dp"
+                       android:layout_weight="80"
+                       bind:posterPath="@{movie.posterPath}"
+                       tools:ignore="ContentDescription">
+
+                   </ImageView>
+
+                   <TextView
+                       android:id="@+id/txtMovie"
+                       android:layout_width="match_parent"
+                       android:layout_height="0dp"
+                       android:layout_gravity="center"
+                       android:layout_weight="20"
+                       android:gravity="center"
+                       android:text="@{movie.title}"
+                       android:textStyle="bold">
+
+                   </TextView>
+
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+
+       </RelativeLayout>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="true">
+
+
+        <ImageView
+            android:id="@+id/item_Populars_img"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:scaleType="centerCrop"
+            android:transitionName="@string/sharedElementName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:posterPath="@{movie.posterPath}"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/item_Populars_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{movie.title}"
+            android:textColor="@color/colorTitlePopulars"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_Populars_img" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

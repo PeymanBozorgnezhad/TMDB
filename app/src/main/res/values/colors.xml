@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--text colors-->
+
+    <color name="text_black_60">#99000000</color>
+    <color name="text_black_87">#DE000000</color>
+
+    <color name="colorPrimary">#4c4c4c</color>
+    <color name="colorPrimaryDark">#000105</color>
+    <color name="colorAccent">#a53205</color>
+    <color name="background">#fbf9f9</color>
+    <color name="colorRefresh">#4CAF50</color>
+    <color name="colorTitlePopulars">#ffffff</color>
+    <color name="bookmarkColor">#B3B3B3</color>
+
+    <color name="secondaryText">@color/text_black_60</color>
+    <color name="primaryText">@color/text_black_87</color>
+
+    <color name="md_grey_200">#EEEEEE</color>
+    <color name="md_blue_grey_200">#B0BBC5</color>
+</resources>

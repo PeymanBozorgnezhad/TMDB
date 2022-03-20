@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="secondary"
+            type="com.example.mytmdbclient.model.MoviesTopRate" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:showIn="@layout/activity_movie">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:id="@+id/label_trailers"
+
+                style="@style/Label"
+
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="16dp"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/label_trailers"
+                app:layout_constraintBottom_toTopOf="@+id/RvTopRateTrailer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RvTopRateTrailer"
+
+                android:layout_width="0dp"
+
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="16dp"
+
+                android:layout_marginBottom="16dp"
+
+                android:clipToPadding="false"
+
+                android:orientation="horizontal"
+
+                android:paddingEnd="16dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/label_trailers"
+
+                tools:ignore="RtlSymmetry" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+
+                android:id="@+id/barrier3"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="RvTopRateTrailer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+
+                android:id="@+id/view_divider2"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="1dp"
+
+                android:layout_marginTop="9dp"
+
+                android:background="?android:attr/listDivider"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/RvTopRateTrailer" />
+
+
+            <TextView
+                android:id="@+id/label_casts"
+                style="@style/Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/label_casts"
+                app:layout_constraintBottom_toTopOf="@+id/RvTopRateCast"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/RvTopRateTrailer" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RvTopRateCast"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_casts"
+                tools:ignore="RtlSymmetry" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>
+
