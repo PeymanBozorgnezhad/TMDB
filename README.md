@@ -1,21 +1,21 @@
-
 # TMDB
 [The Movie Database (TMDB)
 ](https://www.themoviedb.org/)
 
 
+
 # Setup
 
-# Get an API Key
+
+## Get an API Key
 
 Create an API Key from The Movie Database web site [https://www.themoviedb.org/documentation/api](https://www.themoviedb.org/documentation/api).
 
-# Set you API Key
+## Set you API Key
 
 Set your API key before making any calls
 
 # Examples
-
 
 TMDbAPI.setAPIKey("ahb4334n43nj34jk43nklkg4")
 
@@ -47,7 +47,6 @@ Get information about people.
 
 Search for movies, TV shows and people.
 
-
 # Documentation
 
 The latest documentation for the TMDb APIs is available [here.
@@ -56,6 +55,6 @@ The latest documentation for the TMDb APIs is available [here.
 
 # References
 
-[https://www.themoviedb.org](https://www.themoviedb.org)
-[https://developers.themoviedb.org](https://developers.themoviedb.org)
+* [https://www.themoviedb.org](https://www.themoviedb.org)
+* [https://developers.themoviedb.org](https://developers.themoviedb.org)
 
