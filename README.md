@@ -19,6 +19,11 @@ Set your API key before making any calls
 
 TMDbAPI.setAPIKey("ahb4334n43nj34jk43nklkg4")
 
+## Architecture
+Based on mvvm architecture and repository pattern.<br><br>
+![architecture](https://s3.ap-south-1.amazonaws.com/mindorks-server-uploads/mvvm.png)
+
+
 # API Areas
 
 ## Certifications
