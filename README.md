@@ -6,10 +6,6 @@
 
 
 
-#Demo Video
-<img src="https://ezgif.com/optimize/ezgif-4-e2356a0713.gif">
-
-
 
 # Setup
 
