@@ -3,7 +3,7 @@
 ](https://www.themoviedb.org/)
 
 # Screenshots
-![photo_2022-04-22_14-52-44](https://user-images.githubusercontent.com/101660428/164699803-778b0190-7333-49ed-850d-dbe6090c1bec.jpg){ width: 200px; }
+![photo_2022-04-22_14-52-44]{ width: 200px; }(https://user-images.githubusercontent.com/101660428/164699803-778b0190-7333-49ed-850d-dbe6090c1bec.jpg)
 ![photo_2022-04-22_14-53-10](https://user-images.githubusercontent.com/101660428/164699806-f11b64ff-445a-414b-95bc-e23d68286549.jpg)
 ![photo_2022-04-22_14-53-48](https://user-images.githubusercontent.com/101660428/164699815-71a69c28-051e-4d33-8e39-3212d2848c84.jpg)
 ![photo_2022-04-22_14-53-51](https://user-images.githubusercontent.com/101660428/164699819-f88d1155-7b60-46af-8c40-c96f2acf4947.jpg)
